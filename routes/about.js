@@ -12,7 +12,18 @@ router.get("/", (req, res) => {
 });
 
 router.get("/me", (req, res) => {
-  res.send("About me");
+  res.send([
+    {
+      id: "me",
+      name: "Laiba",
+      message: "Hello",
+    },
+    {
+      id: "not-me",
+      name: "SomeoneElse",
+      message: "Bye",
+    },
+  ]);
 });
 
 module.exports = router;
